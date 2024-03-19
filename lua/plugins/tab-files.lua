@@ -5,5 +5,6 @@ return {{
     },
     init = function()
         vim.keymap.set('n', '<C-z>', ':<Cmd>BufferPrevious<CR><CR>', {silent = true})
+        vim.keymap.set('n', '<C-x>', ':<Cmd>BufferClose<CR><CR>', {silent = true})
     end,
 }}
