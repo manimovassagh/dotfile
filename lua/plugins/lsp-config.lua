@@ -8,10 +8,11 @@ return {{
     "williamboman/mason-lspconfig.nvim",
     config = function()
         require("mason-lspconfig").setup({
-            ensure_installed = {"lua_ls", "tsserver", "gopls", "pylsp", "html", "jsonls"}
+            ensure_installed = {"lua_ls", "tsserver", "gopls", "pylsp", "html", "jsonls", "tailwindcss", "hydra_lsp",
+                                "yamlls", "typst_lsp", "sqlls", "eslint", "docker_compose_language_service", "dockerls",
+                                "cssls", "angularls"}
         })
     end
-  
 
 }, {
     "neovim/nvim-lspconfig",
@@ -31,6 +32,6 @@ return {{
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
         vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
         vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {})
-        vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+        vim.keymap.set({'n', 'v'}, '<space>ca', vim.lsp.buf.code_action, opts)
     end
 }}
